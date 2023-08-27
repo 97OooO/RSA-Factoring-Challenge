@@ -12,10 +12,13 @@ def main(input_file):
     with open(input_file, 'r') as file:
         for line in file:
             number = int(line.strip())
+            start_time = time.time()
             factors = facto(number)
+            end_time = time.time()
             if factors:
                 p, q = factors[0]
                 print(f"{number}={p}*{q}")
+                print(f"Execution Time: {end_time -start_time:.6f} seconds")
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
