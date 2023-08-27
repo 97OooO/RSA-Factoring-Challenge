@@ -1,6 +1,12 @@
 #!/usr/bin/python3
 import sys
+import time
+
 def facto(number):
+    '''Takes an input number.
+    Args: number: input integer.
+    Return: returns to factors.
+'''
     factors = []
     for i in range(2, number // 2 + 1):
         if number % i == 0:
@@ -21,6 +27,8 @@ def main(input_file):
                 print(f"Execution Time: {end_time -start_time:.6f} seconds")
 
 if __name__ == "__main__":
+    '''Reads the input file.
+    '''
     if len(sys.argv) != 2:
         print("Usage: python factors.py <file>")
         sys.exit(1)
